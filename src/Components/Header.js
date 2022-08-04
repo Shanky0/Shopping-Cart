@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import '../Components/style.css';
+import { Outlet, Link } from 'react-router-dom';
 import data from './test.json';
 import test from './test.json';
 
-const Header = () => {
+
+const Header = ({cart,cartSize}) => {
+  // var [numlist,setNumlist] = useState(cartItem.length);
 
   const input = () => {
     document.querySelector("#result").style.display = "block";
@@ -25,7 +28,7 @@ const Header = () => {
       })
     }
   }
- 
+
   const searching = () => {
 
     document.querySelector('.search-form').classList.toggle("active");
@@ -55,9 +58,9 @@ const Header = () => {
     document.querySelector("#detailContainer").style = "display:none";
   }
 
-   // Details of Selected Resturant
+  // Details of Selected Resturant
 
-   const details = (e) => {
+  const details = (e) => {
     var resname = (e.target.innerHTML).split("-");
 
     document.querySelector("#sea").style.display = "none";
@@ -82,41 +85,43 @@ const Header = () => {
     })
   }
 
+
   return (
     <>
       <header className="header">
-        <a href="=" className="logo">
+        <h1 className="logo">
           <img src={require("../Images/433087.png")} alt="logo" /> <span>Grab</span>
-        </a>
+        </h1>
         {/* For Navbar on Desktop */}
         <nav className="navbar">
           <div id="searc"><input id="searchBOX" onChange={input} /><i className="fas fa-search" id="search-btn" /></div>
-          <a href="#main">home</a>
-          <a href="#offer">Offers</a>
-          <a href="#review">review</a>
-          <a href=".loginC" id="loginDText" onClick={login}>LogIN</a>
-          <a href=".signC" id="signDText" onClick={sign}>SignUP</a>
-          <a href="=" id="logDout"> </a>
+          {/* Search Result */}
+          <div id="sea">
+            <ul id="result" onClick={details}>
+            </ul>
+          </div>
+          <h1 >home</h1>
+          <h1 >Offers</h1>
+          <h1 >review</h1>
+          <h1 href=".loginC" id="loginDText" onClick={login}>LogIN</h1>
+          <h1 href=".signC" id="signDText" onClick={sign}>SignUP</h1>
+          <Link to="/cart"><i className="fas fa-shopping-cart cart-btn" > <span>{cartSize}</span></i></Link>
+          <h1 id="logDout"> </h1>
         </nav>
-         {/* Search Result */}
-         <div id="sea">
-          <ul id="result" onClick={details}>
-          </ul>
-        </div>
+
         {/* For NavBar on mobile screen */}
         <nav className="navbarActive">
-          <a href="#home">home</a>
-          <a href="#about">about</a>
-          <a href="#review">review</a>
-          <a href="#contact">contact</a>
-          <a href="=" id="loginText" onClick={login}>LogIN</a>
-          <a href="=" id="signText" onClick={sign}>SignUP</a>
-          <a href="=" id="logout"> </a>
+          <h1>home</h1>
+          <h1>review</h1>
+          <h1>contact</h1>
+          <h1 id="loginText" onClick={login}>LogIN</h1>
+          <h1 id="signText" onClick={sign}>SignUP</h1>
+          <h1 id="logout"> </h1>
         </nav>
         <div className="icons">
           <div></div>
           <div className="fas fa-search" id="search-btn" onClick={searching}></div>
-          <div className="fas fa-shopping-cart" id="cart-btn"></div>
+          <div><Link to="/cart"><i className="fas fa-shopping-cart cart-btn" > <span>{cartSize}</span></i></Link></div>
           <div className="fas fa-bars" id="menu-btn" onClick={menu}></div>
         </div>
         <div className="search-form">
@@ -124,6 +129,7 @@ const Header = () => {
           <label className="fas fa-search"></label>
         </div>
       </header>
+      <Outlet />
     </>
   )
 }

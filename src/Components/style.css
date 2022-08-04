@@ -22,10 +22,11 @@ header {
     max-height: 20vh;
 }
 
-.navbar a {
+.navbar h1 {
     color: white;
     margin: 0 1rem;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .navbar a:hover {
@@ -39,6 +40,7 @@ header {
 
 #searc {
     position: relative;
+
 }
 
 #searc input {
@@ -47,6 +49,7 @@ header {
     font-size: 1rem;
     outline: none;
     color: tomato;
+    position: relative;
 }
 
 #searc i {
@@ -66,6 +69,7 @@ header {
     color: tomato;
     padding: 0rem .5rem;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .logo span:hover {
@@ -73,6 +77,7 @@ header {
 }
 
 .logo img {
+    cursor: pointer;
     height: 3rem;
 }
 
@@ -127,6 +132,12 @@ header .search-form label:hover {
     color: tomato;
 }
 
+.navbar .fa-shopping-cart{
+    color: white;
+    font-size: 4vh;
+    cursor: pointer;
+}
+
 /* Main Section */
 
 .main {
@@ -150,6 +161,11 @@ header .search-form label:hover {
 
 .content h3 span {
     color: white;
+}
+.content .btn span{
+    font-size: 1rem;
+    color: white;
+    font-weight: normal;
 }
 
 .content h1 span {
@@ -180,10 +196,10 @@ header .search-form label:hover {
     height: fit-content;
     max-height: 10rem;
     overflow-y: scroll;
-    margin-top: 10vh;
-    width:27.2rem;
-    top:1.5vh;
-    right: 37%;
+    /* margin-top: 33vh; */
+    width:27rem;
+    top:9vh;
+    /* right: 37%; */
     background-color: white;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -309,6 +325,7 @@ header .search-form label:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 1.5rem;
+  
 }
 
 #box-container .box {
@@ -317,6 +334,7 @@ header .search-form label:hover {
     border: 1px solid white;
     border-radius: 15px;
     cursor: pointer;
+    text-align: center;
 }
 
 #box-container .box:hover {
@@ -324,6 +342,7 @@ header .search-form label:hover {
 }
 
 #box-container .box img {
+    min-width: 12rem;
     max-width: 12rem;
     height: 10rem;
 }
@@ -347,6 +366,7 @@ header .search-form label:hover {
 }
 
 #box-container .box .btn {
+    bottom: 0;
     border: 1px solid white;
     padding: .5rem 1rem;
     margin: 1rem 0rem;
@@ -358,6 +378,17 @@ header .search-form label:hover {
     color: green;
     transform: scaleX(1.1);
     transition: 200ms;
+}
+ .cart-btn{
+    position: relative !important;
+    color: white;
+
+}
+.cart-btn span{ 
+    position: absolute !important;
+    top: 0 ;
+    right: -2vh;
+    font-size: 2vh;
 }
 
 /* LogIn section */

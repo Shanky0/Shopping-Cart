@@ -1,8 +1,10 @@
 import React from 'react';
 import data from './Data.json';
+import { Outlet, Link } from 'react-router-dom';
+import Header from './Header';
 
 
-const Main = () => {
+const Main = ({cartSize,setCartSize}) => {
 
   // SignIn, Login and Cross Button function ------------------------------------->
   const login = (e) => {
@@ -20,7 +22,7 @@ const Main = () => {
     document.querySelector("#pass").value = "";
     document.querySelector("#confirm").value = "";
     document.querySelector("#warning").style = "display:none";
-    
+
   }
   const sign = (e) => {
     e.preventDefault();
@@ -48,7 +50,7 @@ const Main = () => {
           document.querySelector("#signDText").style.display = "none";
           document.querySelector("#logDout").innerHTML = `<i class="fa-solid fa-right-from-bracket"></i>`;
           document.querySelector("#loginText").innerHTML = `${val.name}`;
-          document.querySelector("#signText").style.display="none";
+          document.querySelector("#signText").style.display = "none";
           document.querySelector("#logout").innerHTML = `<i class="fa-solid fa-right-from-bracket"></i>`;
         }
       })
@@ -62,7 +64,7 @@ const Main = () => {
     const emailsign = document.querySelector("#emailsign").value.toLowerCase();
     const pass = document.querySelector("#pass").value;
     const confirm = document.querySelector("#confirm").value;
-    if (nam==="" ||emailsign === "" || pass === "" || confirm === "") {
+    if (nam === "" || emailsign === "" || pass === "" || confirm === "") {
       document.querySelector("#warn").innerHTML = "Fill all the fields ";
       document.querySelector("#warn").style = "color:red;font-size:1.3rem;"
     } else if (pass !== confirm) {
@@ -82,15 +84,16 @@ const Main = () => {
     }
   }
 
- 
+
 
   return (
     <>
+    {/* <Header/> */}
       <section id="main" className='main'>
         <div className='content'>
           <h3>Feeling <span> Hungry</span></h3>
           <h1><span> Grab </span>food from Us</h1>
-          <a href=".about" className='btn'> Know About<span> US</span> </a>
+          <h1 className='btn'> Know About<span> US</span> </h1>
         </div>
 
 
@@ -133,19 +136,18 @@ const Main = () => {
           </div>
 
           <div id="extra">
-          <h3 style={{color:"rgb(106, 86, 216)",textDecoration:"underline",marginTop:"1rem",marginBottom:"2rem",fontSize:"1.5rem"}}>Operating Hours</h3>
+            <h3 style={{ color: "rgb(106, 86, 216)", textDecoration: "underline", marginTop: "1rem", marginBottom: "2rem", fontSize: "1.5rem" }}>Operating Hours</h3>
             <div id="opH">
 
             </div>
             <div >
-              <h3 style={{color:"rgb(106, 86, 216)",textDecoration:"underline",marginTop:"2rem",textTransform:"uppercase",fontSize:"1.5rem"}}>Review</h3>
+              <h3 style={{ color: "rgb(106, 86, 216)", textDecoration: "underline", marginTop: "2rem", textTransform: "uppercase", fontSize: "1.5rem" }}>Review</h3>
               <div id="review"></div>
-
-
             </div>
           </div>
         </div>
       </section>
+      <Outlet />
     </>
   )
 }
