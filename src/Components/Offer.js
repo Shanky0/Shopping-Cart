@@ -11,7 +11,7 @@ const Offer = (props) => {
     const item = e.target.parentNode.id;
     food.forEach(val=>{
       if(val.title === item)
-      {
+      {  
         if(val.cart >= 1){
           val.cart++;
         }else{
