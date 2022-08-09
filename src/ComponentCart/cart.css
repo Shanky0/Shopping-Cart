@@ -7,9 +7,9 @@
     z-index: 1;
     top: 13%;
     width: 100%;
+    bottom: 0;
     background-color: black;
-    height: 87vh;
-    max-height: 90vh;
+    font-size: 4vh;
     border-top: 1px solid salmon;
 }
 
@@ -20,17 +20,18 @@
     height: fit-content;
     height: 87vh;
     max-height: 90vh;
-    border: 1px solid;
     overflow-y: scroll;
 }
+#itemContainer::-webkit-scrollbar {
+    display: none;
+  }
 
 #totalDisplay{
-    border: 1px solid white;
     float: right;
     width: 30%;
     color: white;
     height: 80vh;
-    max-height: 90vh;
+    max-height: 100vh;
 }
 /* Container Ends */
 
@@ -39,6 +40,7 @@
 #itemContainer h1{
     text-align: center;
     color: rgb(93, 78, 182);
+    font-size: 5vh;
     margin: 2rem;
     font-weight: 700;
 }
@@ -87,15 +89,15 @@
     position: relative;
 }
 #itemDetails h3{
-    font-size: 2.5rem;
+    font-size: 4vh;
     color: salmon;
 }
 #itemDetails h5{
-    font-size: 2rem;
+    font-size: 3vh;
     color: green;
 }
 #itemDetails p{
-    font-size: 1.5rem;
+    font-size: 2vh;
 }
 #itemDetails .extra{
     position: absolute;
@@ -109,7 +111,7 @@
     border-radius: 10px;
 }
 .extra h6{
-    font-size: 1.5rem;
+    font-size: 2vh;
 }
 #itemDetails .extra:hover{
     background-color: rgb(93, 78, 182);
@@ -127,26 +129,24 @@
 }
 #totalDisplay #empty{
     background-color: salmon;
-    font-size: 2rem;
+    font-size: 4vh;
     font-weight: 600;
     border-radius: 10px;
     width: 60%;
     margin: 1% 20%;
     padding: .5rem;
-    border:1px solid white;
 }
 #totalDisplay #empty:hover{
 background-color: red;
 }
  #placeOrder{
     background-color: salmon;
-    font-size: 2rem;
+    font-size: 4vh;
     font-weight: 600;
     border-radius: 10px;
     width: 60%;
     margin: 10% 20%;
     padding: .5rem;
-    border:1px solid white;
 }
 #placeOrder:hover{
     background-color:green ;
