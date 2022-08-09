@@ -9,18 +9,17 @@ import Offer from './Components/Offer';
 
 const App = () => {
     var [cartSize, setCartSize] = useState(0);
-    var [totalPrice, setTotalPrice] = useState(0);
-    var [discount,setDiscount] =useState(0);
+
     return (
         <>
             <Router>
                 <Routes>
-                    <Route path="/" element={<Header cart={setCartSize} cartSize={cartSize} totalPrice={totalPrice} setTotalPrice={setTotalPrice} />} >
-                        <Route path='/' element={<Main cart={setCartSize} cartSize={cartSize} totalPrice={totalPrice} setTotalPrice={setTotalPrice} />} >
-                            <Route path='/' element={<Offer cart={setCartSize} cartSize={cartSize} totalPrice={totalPrice} setTotalPrice={setTotalPrice} discount={discount} setDiscount={setDiscount}/>} />
+                    <Route path="/" element={<Header cart={setCartSize} cartSize={cartSize} />} >
+                        <Route path='/' element={<Main cart={setCartSize} cartSize={cartSize} />} >
+                            <Route path='/' element={<Offer cart={setCartSize} cartSize={cartSize} />} />
                         </Route>
-                        <Route path='/cart' element={<Cart cart={setCartSize} cartSize={cartSize} totalPrice={totalPrice} setTotalPrice={setTotalPrice} discount={discount} setDiscount={setDiscount}/>}  />
-                        <Route path='/checkout' element={<Checkout cart={setCartSize} cartSize={cartSize} totalPrice={totalPrice} setTotalPrice={setTotalPrice} />} />
+                        <Route path='/cart' element={<Cart cart={setCartSize} cartSize={cartSize} />}  />
+                        <Route path='/checkout' element={<Checkout cart={setCartSize} cartSize={cartSize} />} />
                     </Route>
                 </Routes>
             </Router>
