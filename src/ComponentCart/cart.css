@@ -9,8 +9,7 @@
     width: 100%;
     background-color: black;
     height: 87vh;
-    max-height: 90vh;
-    border-top: 1px solid salmon;
+    max-height: 100vh;
 }
 
 #itemContainer{
@@ -18,19 +17,21 @@
     color: white;
     width: 70%;
     height: fit-content;
-    height: 87vh;
+    height: 100%;
     max-height: 90vh;
-    border: 1px solid;
     overflow-y: scroll;
+}
+#itemContainer::-webkit-scrollbar{
+    display: none;
 }
 
 #totalDisplay{
-    border: 1px solid white;
     float: right;
+    border-left: 1px solid;
     width: 30%;
     color: white;
-    height: 80vh;
-    max-height: 90vh;
+    height: 85vh;
+    max-height: 100vh;
 }
 /* Container Ends */
 
@@ -48,7 +49,7 @@
     margin: 4vh 10vh;
     border: 1px solid;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 1.5vh;
 }
 .cartitemImg{
     text-align: center;
@@ -59,7 +60,7 @@
     margin: auto;
     min-width: 15rem;
     height: 15vh;
-    border-radius: 10px;
+    border-radius: 1.5vh;
 }
 .cartitemImg span{
     padding: 0.2rem 1rem;
@@ -87,29 +88,28 @@
     position: relative;
 }
 #itemDetails h3{
-    font-size: 2.5rem;
+    font-size: 5vh;
     color: salmon;
 }
 #itemDetails h5{
-    font-size: 2rem;
+    font-size: 3.5vh;
     color: green;
 }
 #itemDetails p{
-    font-size: 1.5rem;
+    font-size: 2.5vh;
 }
 #itemDetails .extra{
     position: absolute;
     bottom: 0;
-    right: 1rem;
+    right: 1vh;
     cursor: pointer;
-    border: 1px solid white;
     text-align: center;
-    padding: .4rem;
+    padding: .8vh;
     background-color: tomato;
-    border-radius: 10px;
+    border-radius: 1.5vh;
 }
 .extra h6{
-    font-size: 1.5rem;
+    font-size: 3vh;
 }
 #itemDetails .extra:hover{
     background-color: rgb(93, 78, 182);
@@ -121,33 +121,49 @@
 #totalDisplay h1{
     text-align: center;
     color: rgb(93, 78, 182);
-    margin: 2rem;
+    margin: 4vh;
     font-weight: 700;
     margin-bottom: 8vh;
 }
 #totalDisplay #empty{
     background-color: salmon;
-    font-size: 2rem;
+    font-size: 4vh;
     font-weight: 600;
     border-radius: 10px;
     width: 60%;
     margin: 1% 20%;
     padding: .5rem;
-    border:1px solid white;
 }
 #totalDisplay #empty:hover{
 background-color: red;
 }
  #placeOrder{
     background-color: salmon;
-    font-size: 2rem;
+    font-size: 4vh;
     font-weight: 600;
     border-radius: 10px;
     width: 60%;
     margin: 10% 20%;
     padding: .5rem;
-    border:1px solid white;
 }
 #placeOrder:hover{
     background-color:green ;
+}
+
+/* Checkout styles */
+
+#checkoutContainer{
+    left: 0;
+    right: 0;
+    min-height: 88vh;
+    position: absolute;
+    top: 12vh;
+    background-image: url("https://www.psdtemplatesblog.com/wp-content/uploads/2015/07/Shopify-Checkout.gif");
+    background-position: top;
+    background-repeat: no-repeat;
+}  
+
+#shopMore:hover{
+    color: black !important;
+    background-color: tomato !important;
 }

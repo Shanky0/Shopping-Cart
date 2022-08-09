@@ -39,7 +39,6 @@ const Cart = ({ cart, cartSize,totalPrice,setTotalPrice,discount,setDiscount }) 
     setArr([...product]);
     setTotalPrice((price.toFixed(1)));
     setDiscount(dis);
-
   }
 
   const remove = (e) => {
@@ -71,7 +70,7 @@ const Cart = ({ cart, cartSize,totalPrice,setTotalPrice,discount,setDiscount }) 
     <>
       <div id="containerAll">
         <div id='itemContainer'>
-          <h1> Cart Details</h1>
+          <h1 style={{fontSize:"5vh"}}> Cart Details</h1>
           {arr.map((val,index) => {
             if (val.cart >= 1)
               return (
@@ -93,13 +92,13 @@ const Cart = ({ cart, cartSize,totalPrice,setTotalPrice,discount,setDiscount }) 
 
 
         <div id='totalDisplay'>
-          <h1>Price Details</h1>
+          <h1 style={{fontSize:"5vh"}}>Price Details</h1>
           <div>
-            <div style={{ display: "flex", justifyContent: "space-between", width: "80%", margin: "auto", alignItems: "center", fontSize: "1.5rem" }}><h2>Price ( {cartSize}  items ) </h2> <span>{`₹ ${totalPrice}`}</span></div>
-            <div style={{ display: "flex", justifyContent: "space-between", width: "80%", margin: "auto", marginTop: "8vh", alignItems: "center", fontSize: "1.5rem" }}>  <h2>Discont</h2> <span>{`- ₹ ${discount}`}</span></div>
+            <div style={{ display: "flex", justifyContent: "space-between", width: "80%", margin: "auto", alignItems: "center", fontSize: "3.5vh" }}><h2 style={{fontSize:"3.5vh"}}>Price ( {cartSize}  items ) </h2> <span>{`₹ ${totalPrice}`}</span></div>
+            <div style={{ display: "flex", justifyContent: "space-between", width: "80%", margin: "auto", marginTop: "8vh", alignItems: "center", fontSize: "3.5vh" }}>  <h2 style={{fontSize:"3.5vh"}}>Discont</h2> <span>{`- ₹ ${discount}`}</span></div>
           </div>
 
-          <div style={{ display: "flex", justifyContent: "space-between", width: "80%", margin: "auto", marginTop: "8vh", alignItems: "center" }}><h2 style={{ color: "tomato" }}>Total Amount</h2><span style={{ fontSize: "2rem", color: "tomato" }}>{`₹ ${totalPrice}`}</span></div>
+          <div style={{ display: "flex", justifyContent: "space-between", width: "80%", margin: "auto", marginTop: "8vh", alignItems: "center" }}><h2 style={{ color: "tomato",fontSize:"3.5vh" }}>Total Amount</h2><span style={{ fontSize: "3.5vh", color: "tomato" }}>{`₹ ${totalPrice}`}</span></div>
           <Link to="/checkout"><button id='placeOrder'>Place Order</button></Link>
           <button id='empty' onClick={empty}>Empty Cart</button>
         </div>
