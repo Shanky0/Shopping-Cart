@@ -17,7 +17,7 @@
   "width": 299,
   "price": 29.45,
   "rating": 4,
-  "cart":1
+  "cart":0
 }, { 
   "title": "Asparagus",
   "type": "vegetable",
@@ -27,7 +27,7 @@
   "width": 299,
   "price": 18.95,
   "rating": 3,
-  "cart":1
+  "cart":0
 }, { 
   "title": "Green smoothie",
   "type": "dairy",
