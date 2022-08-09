@@ -98,7 +98,7 @@ const Cart = ({ cart, cartSize,totalPrice,setTotalPrice,discount,setDiscount }) 
             <div style={{ display: "flex", justifyContent: "space-between", width: "80%", margin: "auto", marginTop: "8vh", alignItems: "center", fontSize: "3.5vh" }}>  <h2 style={{fontSize:"3.5vh"}}>Discont</h2> <span>{`- ₹ ${discount}`}</span></div>
           </div>
 
-          <div style={{ display: "flex", justifyContent: "space-between", width: "80%", margin: "auto", marginTop: "8vh", alignItems: "center" }}><h2 style={{ color: "tomato",fontSize:"3.5vh" }}>Total Amount</h2><span style={{ fontSize: "3.5vh", color: "tomato" }}>{`₹ ${totalPrice}`}</span></div>
+          <div style={{ display: "flex", justifyContent: "space-between", width: "80%", margin: "auto", marginTop: "8vh", alignItems: "center" }}><h2 style={{ color: "tomato",fontSize:"3.5vh" }}>Total Amount</h2><span style={{ fontSize: "3.5vh", color: "tomato" }}>{`₹ ${(totalPrice - discount).toFixed(1)}`}</span></div>
           <Link to="/checkout"><button id='placeOrder'>Place Order</button></Link>
           <button id='empty' onClick={empty}>Empty Cart</button>
         </div>

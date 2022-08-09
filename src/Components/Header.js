@@ -101,7 +101,7 @@ const Header = ({ cart, cartSize }) => {
             </ul>
           </div>
           <h1><Link to="/" style={{ color: "white" }}>Home</Link></h1>
-          <h1><Link to="/" style={{ color: "white" }}>Offer</Link></h1>
+          <h1><Link to="/" style={{ color: "white" }}>Menu</Link></h1>
           <h1>review</h1>
           <h1 href=".loginC" id="loginDText" onClick={login}>LogIN</h1>
           <h1 href=".signC" id="signDText" onClick={sign}>SignUP</h1>
@@ -112,7 +112,7 @@ const Header = ({ cart, cartSize }) => {
         {/* For NavBar on mobile screen */}
         <nav className="navbarActive">
           <h1> <Link to="/" style={{ color: "white" }}>Home</Link></h1>
-          <h1 ><Link to="/" style={{ color: "white" }}>Offer</Link></h1>
+          <h1 ><Link to="/" style={{ color: "white" }}>Menu</Link></h1>
           <h1>contact</h1>
           <h1 id="loginText" onClick={login}>LogIN</h1>
           <h1 id="signText" onClick={sign}>SignUP</h1>
