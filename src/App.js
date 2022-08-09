@@ -9,6 +9,8 @@ import Offer from './Components/Offer';
 
 const App = () => {
     var [cartSize, setCartSize] = useState(0);
+    var [discount,setDiscount] =useState(0);
+    var [totalPrice, setTotalPrice] = useState(0);
 
     return (
         <>
@@ -16,9 +18,9 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Header cart={setCartSize} cartSize={cartSize} />} >
                         <Route path='/' element={<Main cart={setCartSize} cartSize={cartSize} />} >
-                            <Route path='/' element={<Offer cart={setCartSize} cartSize={cartSize} />} />
+                            <Route path='/' element={<Offer cart={setCartSize} cartSize={cartSize} discount={discount} setDiscount={setDiscount} totalPrice={totalPrice} setTotalPrice={setTotalPrice} />} />
                         </Route>
-                        <Route path='/cart' element={<Cart cart={setCartSize} cartSize={cartSize} />}  />
+                        <Route path='/cart' element={<Cart cart={setCartSize} cartSize={cartSize} discount={discount} setDiscount={setDiscount}  totalPrice={totalPrice} setTotalPrice={setTotalPrice} />}  />
                         <Route path='/checkout' element={<Checkout cart={setCartSize} cartSize={cartSize} />} />
                     </Route>
                 </Routes>

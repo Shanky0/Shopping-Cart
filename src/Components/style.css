@@ -29,7 +29,7 @@ header {
     cursor: pointer;
 }
 
-.navbar a:hover {
+.navbar h1:hover {
     color: tomato;
 }
 

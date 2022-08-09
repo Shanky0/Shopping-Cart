@@ -5,7 +5,7 @@ import data from './test.json';
 import test from './test.json';
 
 
-const Header = ({cart,cartSize}) => {
+const Header = ({ cart, cartSize }) => {
   // var [numlist,setNumlist] = useState(cartItem.length);
 
   const input = () => {
@@ -90,7 +90,7 @@ const Header = ({cart,cartSize}) => {
     <>
       <header className="header">
         <h1 className="logo">
-          <img src={require("../Images/433087.png")} alt="logo" /> <span>Grab</span>
+          <Link to="/"><img src={require("../Images/433087.png")} alt="logo" /> <span>Grab</span></Link>
         </h1>
         {/* For Navbar on Desktop */}
         <nav className="navbar">
@@ -100,9 +100,9 @@ const Header = ({cart,cartSize}) => {
             <ul id="result" onClick={details}>
             </ul>
           </div>
-          <h1 >home</h1>
-          <h1 >Offers</h1>
-          <h1 >review</h1>
+          <h1><Link to="/" style={{ color: "white" }}>Home</Link></h1>
+          <h1><Link to="/" style={{ color: "white" }}>Offer</Link></h1>
+          <h1>review</h1>
           <h1 href=".loginC" id="loginDText" onClick={login}>LogIN</h1>
           <h1 href=".signC" id="signDText" onClick={sign}>SignUP</h1>
           <Link to="/cart"><i className="fas fa-shopping-cart cart-btn" > <span>{cartSize}</span></i></Link>
@@ -111,8 +111,8 @@ const Header = ({cart,cartSize}) => {
 
         {/* For NavBar on mobile screen */}
         <nav className="navbarActive">
-          <h1>home</h1>
-          <h1>review</h1>
+          <h1> <Link to="/" style={{ color: "white" }}>Home</Link></h1>
+          <h1 ><Link to="/" style={{ color: "white" }}>Offer</Link></h1>
           <h1>contact</h1>
           <h1 id="loginText" onClick={login}>LogIN</h1>
           <h1 id="signText" onClick={sign}>SignUP</h1>
