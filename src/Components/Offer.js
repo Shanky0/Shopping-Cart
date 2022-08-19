@@ -16,13 +16,11 @@ const Offer = (props) => {
           val.cart++;
           props.setDiscount(props.discount+5);
           props.setTotalPrice(Number(Number(props.totalPrice) + val.price).toFixed(1))
-          console.log(props.totalPrice);
         }else{
           val.cart++;
           props.cart(props.cartSize+1);
           props.setDiscount(props.discount+5);
           props.setTotalPrice(Number(Number(props.totalPrice) + val.price).toFixed(1))
-          console.log(props.totalPrice);
         }
       }
     })    
