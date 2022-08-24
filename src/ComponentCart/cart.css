@@ -45,7 +45,7 @@
 }
 #cartContainer{
     display: flex;
-    justify-content:start;
+    /* justify-content:start; */
     margin: 4vh 10vh;
     border: 1px solid;
     border-radius: 10px;

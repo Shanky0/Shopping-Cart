@@ -93,7 +93,7 @@ const Main = ({cartSize,setCartSize}) => {
         <div className='content'>
           <h3>Feeling <span> Hungry</span></h3>
           <h1><span> Grab </span>food from Us</h1>
-          <h1 className='btn'> Know About<span> US</span> </h1>
+         <Link to={'/about'} className='btn'> Know <span> More</span></Link> 
         </div>
 
 
